@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Forms</title>
 </head>
 <body>
     <form action="" method="">
         <label for="name">Nombre: </label>
-        <input type="text" id="name" name="name" placeholder="">
+        <input type="text" name="name" id="name" placeholder="">
         <br>
 
         <label for="email">Mail: </label>
@@ -20,20 +20,23 @@
         <textarea name="message" id="message" cols="30" rows="10" placeholder="Tu mensaje"></textarea>
         <br>
 
+        <label for="pais">País: </label>
         <select name="pais" id="pais">
             <option value="mexico">México</option>
             <option value="canada">Canadá</option>
             <option value="ecuador">Ecuador</option>
         </select>
+        <br>
+        <input type="radio" name="genero" id="hombre" value="Hombre"> <label for="hombre">Hombre</label>
+        <input type="radio" name="genero" id="mujer" value="Mujer"> <label for="mujer">Mujer</label>
+        <br>
 
-        
+        <input type="checkbox" name="terminos" id="terminos" required> <label for="terminos">Términos y condiciones</label>
+        <br>
+        <br>
 
-
-
-
+        <label for=""></label>
+        <input type="submit" name="submit" id="submit" value="Enviar">
     </form>
-
-
-
 </body>
 </html>
