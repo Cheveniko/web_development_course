@@ -1,3 +1,21 @@
-h1 {
-    color:blue;
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background: url(background-sun.webp) repeat center scroll;
+}
+
+.box {
+    background: #86a5c5;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px black solid;
+    border-radius: 0.5px;
+}
+
+.box p{
+    background: #bbcbc6;
 }
