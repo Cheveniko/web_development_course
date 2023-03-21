@@ -1,0 +1,23 @@
+header {
+    background: #fff;
+    nav {
+        width: 100%;
+        ul {
+            width: 100%; 
+            overflow: hidden;
+            li {
+                float: left;
+                a{
+                    padding: 15px 20px;
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #000;
+                    &:hover {
+                        background: #000;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

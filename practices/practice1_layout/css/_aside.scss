@@ -1,0 +1,28 @@
+aside {
+    width: 30%;
+    background: #161f26;
+    padding: 20px;
+    float: left;
+    color: #fff;
+    .widget {
+        margin-bottom: 20px;
+        .widget-title {
+            color: #ff8000;
+            border-bottom: 1px solid #ff8000;
+            margin-bottom: 10px;
+        }
+        .widget-list li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 0px;
+            a {
+                color: #fff;
+                text-decoration: none;
+                &:hover {color: #8f8f8f;}
+            }
+        }
+        .widget-text {
+            color: #fff;
+            line-height: 27px;
+        }
+    }
+}
