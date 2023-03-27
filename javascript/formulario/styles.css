@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f2f2f2;
+    font-size: 18px;
+}
+
+.contenedor {
+    width: 400px;
+    margin: 40px;
+    background: #fff;
+    border-radius: 6px 6px 0px 0px;
+}
+.formulario .contenedor-inputs {
+    padding: 20px;
+    background: #fff;
+    /* border-radius: 6px 6px 0px 0px; */
+}
+
+.formulario input {border: none;}
+
+.formulario input[type="text"],
+.formulario input[type="email"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    border-bottom: 2px solid #ccc;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus {
+    border-bottom: 2px solid #246eb9;
+}
+
+.formulario .sexo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.formulario .label-radio {
+    width: 49.5%;
+    background: rgba(249, 160, 63, 0.4);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.formulario .sexo .hombre {border-radius: 3px 0px 0px 3px;}
+.formulario .sexo .mujer {border-radius: 0px 3px 3px 0px;}
+
+.formulario input[type="radio"] {display: none;}
+.formulario input[type="radio"]:checked + .label-radio {background: rgba(249, 160, 63, 1);}
+
+.formulario .terminos {
+    text-align: center;
+    color: #424242;
+}
+
+.formulario .terminos label {
+    margin-left: 10px;
+}
+
+.formulario .error {
+    display: none;
+    margin-top: 20px;
+    border-radius: 3px;
+    background: #ce1818;
+    color: #fff;
+    padding: 15px 10px 15px 40px;
+}
+
+.formulario .btn {
+    width: 100%;
+    display: block;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    background: #246eb9;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.formulario .btn:hover {background-color: #4357ad;}
