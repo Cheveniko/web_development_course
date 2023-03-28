@@ -1,0 +1,192 @@
+/* block__element--modifier */
+/* 1.Position 2.Display and box model 3.Color 4.Text 5.Other 
+6.Animations */
+
+/* --------- General --------- */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+ul {    list-style: none;}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    overflow: hidden;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* --------- Header --------- */
+
+header {
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    background: url(../img/bg.jpg) #281a0c;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.header-nav {   margin-top: 20px;}
+
+.header-nav__menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header-nav__items {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.header-nav__items:hover {  border-bottom: 1px solid #fff;}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -150px;
+    color: #fff;
+}
+
+.header__title {
+    font-weight: lighter;
+    font-size: 3.1em;
+}
+
+.header__title .bold {  font-weight:600;}
+
+.header__text {
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 1.55em;
+}
+
+/* --------- About --------- */
+
+.about-photo__container {
+    width: 70%;
+    margin-top: -50px;
+}
+
+.about-photo {
+    width: 100%;
+    vertical-align: top;
+}
+
+.about__content {
+    width: 40%;
+    padding: 20px;
+    /* box-shadow:; */
+
+}
+
+.about__title {
+    color: #000;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.about__text {
+    margin-top: 40px;
+    color: #000;
+    font-weight: lighter;
+    line-height: 1.4em;
+}
+
+/* --------- Menu --------- */
+
+/* --------- Gallery --------- */
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* width: 1470px; */
+}
+
+.gallery-photo__container {
+    width: 25%;
+    opacity: 0.7;
+
+}
+.gallery-photo__container:hover {   opacity: 1;}
+
+.gallery-photo {
+    width: 100%;
+    vertical-align: top;
+}
+
+/* --------- Ubicación --------- */
+
+.location-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.location__title {
+    color: #000;
+    font-weight: normal;
+    font-size: 2em;
+    text-align: center;
+}
+
+.location-address{
+    width: 50%;
+    margin: 40px 0px;
+}
+
+.location-schedule {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0px;
+    width: 50%;
+    text-align: center;
+}
+.location-schedule__title { width: 100%;}
+
+/* --------- Map --------- */
+
+.map {
+    width: 100%;
+}
+
+/* --------- Footer --------- */
+
+footer {
+    background: darkblue;
+}
+
+footer .container {
+    margin: 0px;
+    padding: 20px;
+    width: 100%;
+    max-width: none;
+}
+
+.footer-copyright__text {
+    color: #fff;
+    text-align: center;
+}
