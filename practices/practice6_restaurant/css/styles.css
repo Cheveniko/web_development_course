@@ -19,7 +19,7 @@ body {
 
 .container {
     overflow: hidden;
-    margin: 20px auto;
+    margin: auto;
     width: 90%;
     max-width: 1000px;
 }
@@ -29,14 +29,18 @@ body {
 header {
     overflow: hidden;
     width: 100%;
-    height: 600px;
     background: url(../img/bg.jpg) #281a0c;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
 
-.header-nav {   margin-top: 20px;}
+header .container {
+    position: relative;
+    height: 600px;
+}
+
+.header-nav {   margin-top: 40px;}
 
 .header-nav__menu {
     display: flex;
@@ -62,12 +66,13 @@ header {
 .header-content {
     position: absolute;
     top: 50%;
-    width: 100%;
-    margin-top: -150px;
+    margin-top: -70px;
     color: #fff;
+    transform: translate(0px, 0);
 }
 
 .header__title {
+    width: 100%;
     font-weight: lighter;
     font-size: 3.1em;
 }
@@ -75,16 +80,33 @@ header {
 .header__title .bold {  font-weight:600;}
 
 .header__text {
+    width: 100%;
     font-style: italic;
     font-weight: lighter;
     font-size: 1.55em;
 }
 
+/* --------- Main --------- */
+
+main {
+    background: url(../img/bg-textura.png);
+    background-repeat: repeat;
+}
+
 /* --------- About --------- */
 
+.about .container {
+    position: relative;
+    overflow: visible;
+}
+
 .about-photo__container {
-    width: 70%;
-    margin-top: -50px;
+    position: absolute;
+    left: 0px;
+    top: -50px;
+    z-index: 0;
+    width: 80%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35);
 }
 
 .about-photo {
@@ -92,27 +114,89 @@ header {
     vertical-align: top;
 }
 
-.about__content {
-    width: 40%;
-    padding: 20px;
-    /* box-shadow:; */
-
+.about-content {
+    position: relative;
+    top: 500px;
+    float: right;
+    z-index: 1;
+    width: 50%;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35);
 }
 
 .about__title {
     color: #000;
     font-weight: normal;
-    font-size: 2em;
+    font-size: 3.1em;
 }
 
 .about__text {
     margin-top: 40px;
     color: #000;
     font-weight: lighter;
-    line-height: 1.4em;
+    line-height: 1.75em;
 }
 
 /* --------- Menu --------- */
+
+.menu {
+    padding-top: 450px;
+    margin-bottom: 50px;
+}
+
+.menu__title {
+    margin-bottom: 40px;
+    color: #000;
+    font-weight: lighter;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.menu__container,
+.menu__card {
+    overflow: hidden;
+    padding: 10px;
+    border: 1px solid #000;
+    background: transparent;
+}
+
+.menu-content {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+.menu-content__category {
+    margin-bottom: 40px;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu-content__plate {
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 4px dotted #000;
+}
+
+.menu-content__name {
+    float: left;
+    margin-bottom: 15px;
+    font-size: 1.25em;
+}
+.menu-content__price {
+    float:right;
+    margin-bottom: 15px;
+    font-size: 1.25em;
+}
+
+.menu-content__description {
+    clear: both;
+    color: #676767;
+    font-size: 16px;
+}
 
 /* --------- Gallery --------- */
 
@@ -120,73 +204,149 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* width: 1470px; */
 }
 
 .gallery-photo__container {
     width: 25%;
-    opacity: 0.7;
-
 }
-.gallery-photo__container:hover {   opacity: 1;}
 
 .gallery-photo {
     width: 100%;
     vertical-align: top;
+    opacity: 0.7;
+}
+
+.gallery-photo:hover {
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 
 /* --------- Ubicación --------- */
 
-.location-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.location {
+    padding: 60px 0px;
+    background: #fff;
+    overflow: hidden;
 }
 
 .location__title {
+    margin-bottom: 40px;
     color: #000;
-    font-weight: normal;
-    font-size: 2em;
+    font-weight: lighter;
+    font-size: 2.5em;
     text-align: center;
 }
 
 .location-address{
+    float: left;
     width: 50%;
-    margin: 40px 0px;
+    text-align: left;
 }
 
+.location-address__street { margin-bottom: 15px;}
+
 .location-schedule {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 40px 0px;
+    float: right;
+    overflow: hidden;
+    width: 50%;
+    text-align: right;
+}
+.location-schedule__title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.location-schedule__weekdays,
+.location-schedule__weekends {
+    float: left;
     width: 50%;
     text-align: center;
 }
-.location-schedule__title { width: 100%;}
 
 /* --------- Map --------- */
 
 .map {
+    overflow: hidden;
     width: 100%;
+}
+
+.map iframe {
+    width: 100%;
+    vertical-align: top;
 }
 
 /* --------- Footer --------- */
 
 footer {
-    background: darkblue;
-}
-
-footer .container {
-    margin: 0px;
-    padding: 20px;
-    width: 100%;
-    max-width: none;
+    background: #000;
 }
 
 .footer-copyright__text {
+    padding: 15px 0px;
     color: #fff;
     text-align: center;
+}
+
+/* --------- Media Queries --------- */
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 12px;
+    }
+    header .container {
+        position: static;
+        height: auto;
+    }
+    .header-content {
+        position: static;
+        margin: 100px 0px;
+    }
+
+    .header-nav {
+        margin-top: 20px;
+    }
+
+    .header-nav__menu {
+        justify-content: center;
+    }
+
+    .about-photo__container {
+        position: relative;
+        width: 100%;
+    }
+    
+    .about-content {
+        position: relative;
+        width: 100%;
+        top: -50px;
+        transform: translate(0px, 0);
+    }
+
+    .menu {
+        padding-top: 250px;
+    }
+
+    .menu-content {width: 100%;}
+    .gallery-photo__container {width: 50%;}
+
+    .map {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about__text {
+        margin-top: 10px;
+    }
+
+    .location-address {
+        margin-bottom: 15px;
+    }
+
+    .location-schedule,
+    .location-address {
+        width: 100%;
+        text-align: center;
+    }
 }

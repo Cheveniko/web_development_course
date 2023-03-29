@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script src="./js/effects.js"></script>
+    <script src="./js/parallax.js"></script>
     <title>Cafe</title>
 </head>
 <body>
@@ -15,10 +18,10 @@
         <div class="container">
             <nav class="header-nav">
                 <ul class="header-nav__menu">
-                    <li><a href="#" class="header-nav__items">Acerca de</a></li>
-                    <li><a href="#" class="header-nav__items">Menú</a></li>
-                    <li><a href="#" class="header-nav__items">Galería</a></li>
-                    <li><a href="#" class="header-nav__items">Ubicación</a></li>
+                    <li><a href="#" class="header-nav__items" id="btn-about">Acerca de</a></li>
+                    <li><a href="#" class="header-nav__items" id="btn-menu">Menú</a></li>
+                    <li><a href="#" class="header-nav__items" id="btn-gallery">Galería</a></li>
+                    <li><a href="#" class="header-nav__items" id="btn-location">Ubicación</a></li>
                 </ul>
             </nav>
             <div class="header-content">
@@ -33,13 +36,13 @@
                 <div class="about-photo__container">
                     <img src="img/acerca-de.jpg" alt="Foto de Café Mateito" class="about-photo">
                 </div>
-                <article class="about__content">
+                <article class="about-content">
                     <h2 class="about__title">Acerca de</h2>
-                    <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia culpa voluptatum reiciendis sapiente, nostrum repellendus. Ipsam sunt harum non aperiam tenetur autem eius ducimus error aspernatur at deleniti nihil tempora nostrum dolorum voluptas ea magnam, doloremque sequi, sed facere voluptatibus. Nostrum, odio numquam commodi enim quod veritatis similique laudantium culpa?</p>
+                    <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere libero voluptate ipsam voluptas rerum, nihil quas sunt, iure odio vero nemo ex eos aliquam perspiciatis. Illum unde voluptate, porro quaerat magnam rem illo cupiditate repellendus ex nobis tempora amet nam repudiandae quos? Eaque cum pariatur placeat, ea nesciunt corrupti ab.</p>
                 </article>
             </div>
         </section>
-        <section class="menu" id="menu">
+        <section class="menu">
             <div class="container">
                 <h3 class="menu__title" id="menu-title">Menú</h3>
                 <div class="menu__container">
@@ -127,33 +130,29 @@
         <section class="location" id="location">
             <div class="container">
                 <h3 class="location__title">Ubicación</h3>
-                <div class="location-content">
-                    <div class="location-address">
-                        <p class="location-address__street">2915 Primrose Lane<br>Anaheim, CA 92806</p>
-                        <p class="location-address__phone">(503) 400-5479</p>
-                        <p class="location-address__email">mateito@powersoft.com</p>
-                    </div>
-                    <div class="location-schedule">
-                        <h4 class="location-schedule__title">Horarios</h4>
-                        <p class="location-schedule__weekdays">Lunes a Viernes <br> 08:00am - 09:00pm
-                        </p>
-                        <p class="location-schedule__weekends">Sábados y Domingos <br> 11:00am - 11:00pm
-                        </p>
-                    </div>
+                <div class="location-address">
+                    <p class="location-address__street">2915 Primrose Lane<br>Anaheim, CA 92806</p>
+                    <p class="location-address__phone">(503) 400-5479</p>
+                    <p class="location-address__email">mateito@powersoft.com</p>
+                </div>
+                <div class="location-schedule">
+                    <h4 class="location-schedule__title">Horarios</h4>
+                    <p class="location-schedule__weekdays">Lunes a Viernes <br> 08:00am - 09:00pm
+                    </p>
+                    <p class="location-schedule__weekends">Sábados y Domingos <br> 11:00am - 11:00pm
+                    </p>
                 </div>
             </div>
         </section>
         <section class="map" id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.793103829425!2d-78.48590174945937!3d-0.2037059998506421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a1192645a01%3A0xee867c577030d77!2sTorre%20Boreal!5e0!3m2!1ses!2sec!4v1679981822460!5m2!1ses!2sec" width="1470" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.793103829425!2d-78.48589638502314!3d-0.2037059998513712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a1192645a01%3A0xee867c577030d77!2sTorre%20Boreal!5e0!3m2!1ses!2sec!4v1680040038090!5m2!1ses!2sec" width="1470" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
     <footer>
-        <div class="container">
-            <div class="footer-copyright">
-                <p class="footer-copyright__text">
-                    Nicolás Baquero © 2023
-                </p>
-            </div>
+        <div class="footer-copyright">
+            <p class="footer-copyright__text">
+                Nicolás Baquero © 2023
+            </p>
         </div>
     </footer>
 </body>
