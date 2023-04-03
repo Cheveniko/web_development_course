@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Alertas</title>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-primary" role="alert">
+                    <strong>Alert Heading</strong> Some Word
+                </div>
+                <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  <strong>Alert Heading</strong> Alert Content
+                </div>
+                <div class="alert alert-success" role="alert">
+                  <h4 class="alert-heading">Alert Heading</h4>
+                  <p>Alert Content</p>
+                  <hr>
+                  <p class="mb-0">Alert Description</p>
+                </div>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                </div>
+                
+                <div class="alert alert-info" role="alert"><strong>Warning!</strong><a href="#" class="alert-link">Click Here</a></div>
+
+                <script>
+                  var alertList = document.querySelectorAll('.alert');
+                  alertList.forEach(function (alert) {
+                    new bootstrap.Alert(alert)
+                  })
+                </script>
+            </div>
+        </div>
+    </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
